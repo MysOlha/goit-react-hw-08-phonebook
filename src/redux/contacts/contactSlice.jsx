@@ -34,6 +34,7 @@ export const contactSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
+      console.log(action.payload);
     },
 
     [deleteContact.fulfilled](state, action) {
@@ -50,4 +51,4 @@ export const contactSlice = createSlice({
   },
 });
 
-// export const contactReducer = contactSlice.reducer;
+export const contactReducer = contactSlice.reducer;
